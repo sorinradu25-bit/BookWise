@@ -1,4 +1,4 @@
-package com.bookwise.bookwise_api;
+package com.bookwise;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
