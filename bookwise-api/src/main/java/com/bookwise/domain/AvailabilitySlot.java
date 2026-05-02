@@ -21,6 +21,9 @@ import jakarta.persistence.Version;
        indexes = {
            @Index(name = "idx_slots_provider_start", columnList = "provider_id,start_at")
        })
+
+
+       
 public class AvailabilitySlot {
 
     @Id
@@ -54,9 +57,13 @@ public class AvailabilitySlot {
         this.status = status;
     }
 
-    public Long getId() { return id; }
+        public Long getId() { return id; }
     public Provider getProvider() { return provider; }
     public OffsetDateTime getStartAt() { return startAt; }
     public OffsetDateTime getEndAt() { return endAt; }
     public SlotStatus getStatus() { return status; }
+
+    public void setStatus(SlotStatus status) {
+        this.status = status;
+    }
 }

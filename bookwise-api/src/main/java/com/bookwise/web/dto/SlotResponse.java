@@ -1,8 +1,7 @@
 package com.bookwise.web.dto;
 
-import java.time.OffsetDateTime;
-
 import com.bookwise.domain.SlotStatus;
+import java.time.OffsetDateTime;
 
 public record SlotResponse(
         Long id,
