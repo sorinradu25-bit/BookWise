@@ -96,4 +96,15 @@ public class GlobalExceptionHandler {
             HttpServletRequest req) {
         return build(HttpStatus.UNAUTHORIZED, "Invalid email or password", req, null, null);
     }
+
+    // Covers @PreAuthorize denials (AuthorizationDeniedException) too - it
+    // extends AccessDeniedException. These are thrown inside the controller
+    // method call itself, so they reach MVC's exception handling here
+    // rather than the security filter chain's AccessDeniedHandler.
+    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
+    public ResponseEntity<ApiError> handleAccessDenied(
+            org.springframework.security.access.AccessDeniedException ex,
+            HttpServletRequest req) {
+        return build(HttpStatus.FORBIDDEN, "You do not have permission to perform this action", req, null, null);
+    }
 }
