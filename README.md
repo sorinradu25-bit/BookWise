@@ -1,6 +1,6 @@
 # BookWise (Booking Platform API)
 
-Backend-first booking API built with Java 21 + Spring Boot + PostgreSQL + Flyway.
+Backend-first booking API built with Java 25 + Spring Boot 4 + PostgreSQL + Flyway.
 
 ## Goals
 
@@ -11,7 +11,7 @@ Backend-first booking API built with Java 21 + Spring Boot + PostgreSQL + Flyway
 
 ## Tech
 
-- Java 21, Spring Boot 3
+- Java 25, Spring Boot 4
 - PostgreSQL (Docker)
 - Flyway migrations
 - OpenAPI/Swagger (later)
